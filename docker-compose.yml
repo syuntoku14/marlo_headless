@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  marlo_client:
+    image: syuntoku/marlo_client
+    build: .
+    ports:
+      - 10000-${UPPERPORT}:10000
