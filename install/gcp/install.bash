@@ -1,16 +1,18 @@
 # ToDo: 
 # Change the docker to nvidia version
 
+sudo apt update && apt upgrade -y
+
 # install anaconda
-wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
-chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
-bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b -f -p /usr/local
+sudo wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+sudo chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
+sudo bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b -f -p /usr/local
+sudo chown -R $USER /usr/local
 
 # install docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
-sudo apt update && apt upgrade -y
 sudo apt install python3-pip
 
 # install xvfb and opengl
