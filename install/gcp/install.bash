@@ -37,3 +37,9 @@ conda install -y pytorch torchvision -c pytorch
 conda install -y pyvirtualdisplay
 pip3 install torchvision
 pip install -U marlo
+
+# Enable to use docker without sudo
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+sudo systemctl restart docker
+exit
