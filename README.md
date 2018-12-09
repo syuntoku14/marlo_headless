@@ -5,15 +5,13 @@ Using these scripts, you can easily install and run multiple marlo environment o
 ### Install marlo
 
 ```
-bash ./install/gcp/install.bash
+./install/gcp/install.bash
 ```
-
-You should run it with "bash", not "sh".
 
 ### Launch Clients
 
 ```
-sh ./docker/launch_multi_client.sh [number of environment]
+./docker/launch_multi_client.sh [number of environment]
 ```
 
 The environments will be connected to ports 10000, 10001, ..., 9999 + [number of ports].

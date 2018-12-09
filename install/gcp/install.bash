@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # ToDo: 
 # Change the docker to nvidia version
 
