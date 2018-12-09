@@ -1,3 +1,6 @@
+# Before run this code, run
+# export UPPERPORT=10000 && docker-compose up to create default network
+
 if [ $# -eq 0 ]; then
 	echo "Enter the number of client as an argument"
 	exit 1
