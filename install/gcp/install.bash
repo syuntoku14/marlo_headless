@@ -1,9 +1,9 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # ToDo: 
 # Change the docker to nvidia version
 
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 # install anaconda
 sudo wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
