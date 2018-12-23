@@ -6,10 +6,11 @@
 sudo apt update && sudo apt upgrade -y
 
 # install anaconda
-sudo wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
-sudo chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
-sudo bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b -f -p /usr/local
-sudo chown -R $USER /usr/local
+wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
+bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b
+echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 
 # install docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
@@ -46,3 +47,4 @@ yes | pip install -U marlo
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo systemctl restart docker
+exit
