@@ -39,6 +39,7 @@ conda install -y -c crowdai malmo
 conda install -y pytorch torchvision -c pytorch
 conda install -y pyvirtualdisplay
 yes | pip3 install torchvision
+yes | pip3 install "gym[atari]"
 yes | pip install -U marlo
 
 # Enable to use docker without sudo
