@@ -19,7 +19,7 @@ sudo apt install -y python3-pip
 
 # install xvfb and opengl
 sudo apt install -y python-opengl xvfb 
-pip install -y crowdai-repo2docker
+yes | pip install crowdai-repo2docker
 
 # install doceker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -39,8 +39,8 @@ source activate marlo
 conda install -y -c crowdai malmo
 conda install -y pytorch torchvision -c pytorch
 conda install -y pyvirtualdisplay
-pip3 install -y torchvision
-pip install -U -y marlo
+yes | pip3 install torchvision
+yes | pip install -U marlo
 
 # Enable to use docker without sudo
 sudo groupadd docker
