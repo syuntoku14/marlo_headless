@@ -15,7 +15,7 @@ sudo chown -R $USER /usr/local
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
-sudo apt install python3-pip
+sudo apt install -y python3-pip 
 
 # install xvfb and opengl
 sudo apt install -y python-opengl xvfb 
@@ -39,11 +39,10 @@ source activate marlo
 conda install -y -c crowdai malmo
 conda install -y pytorch torchvision -c pytorch
 conda install -y pyvirtualdisplay
-pip3 install torchvision
-pip install -U marlo
+pip3 install -y torchvision
+pip install -U -y marlo
 
 # Enable to use docker without sudo
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo systemctl restart docker
-exit
