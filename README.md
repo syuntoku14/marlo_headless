@@ -10,6 +10,21 @@ Using these scripts, you can easily install and run multiple marlo environment o
 
 Make sure to use . command to run in the current shell.
 
+
+### Optional
+#### Install CUDA
+
+```
+. ./install/gcp/others/cuda_install.bash
+```
+
+#### jupyter-notebook vim extension
+
+```
+. ./install/gcp/others/vim_extension.bash
+```
+
+
 ### Launch Clients
 
 ```
@@ -19,3 +34,4 @@ Make sure to use . command to run in the current shell.
 The environments will be connected to ports 10000, 10001, ..., 9999 + [number of ports].
 
 For example, "sh ./run_docker.sh 3" will run three Minecraft environment connected to port 10000, 10001, 10002.
+

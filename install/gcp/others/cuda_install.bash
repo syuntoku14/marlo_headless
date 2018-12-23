@@ -1,6 +1,8 @@
 #!/bin/bash
 
+# install cuda
 sudo apt update && sudo apt upgrade
+sudo apt autoremove -y
 uname -m && cat /etc/*release | head -n 2
 sudo apt-get install -y build-essential
 sudo apt install -y gcc
@@ -10,7 +12,7 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/
 sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
 sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
 sudo apt-get update
-sudo apt-get install -y cuda nvidia-toolkit
+sudo apt-get install -y cuda nvidia-cuda-toolkit
 
 
 # install nvidia-docker
