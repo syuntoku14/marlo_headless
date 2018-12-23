@@ -5,6 +5,4 @@ services:
     image: syuntoku/marlo_client
     build: .
     ports:
-      - 10000-${UPPERPORT}:10000
-    networks:
-      - default
+      - 10000-${UPPERPORT:-10000}:10000

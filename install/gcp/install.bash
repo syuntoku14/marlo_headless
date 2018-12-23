@@ -15,6 +15,7 @@ source ~/.bashrc
 # install docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
+sudo systemctl start docker
 
 sudo apt install -y python3-pip 
 
@@ -34,7 +35,7 @@ echo "fi" >> ~/.bashrc
 source ~/.bashrc
 
 # install python packages
-conda create python=3.6 --name marlo
+yes | conda create python=3.6 --name marlo
 conda config --add channels conda-forge
 source activate marlo
 conda install -y -c crowdai malmo
@@ -47,4 +48,12 @@ yes | pip install -U marlo
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo systemctl restart docker
+
+# Configure jupyter notebook server
+jupyter notebook --generate-config
+echo "c = get_config()" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.ip = '*'" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.port = 5000" >> ~/.jupyter/jupyter_notebook_config.py
+
 exit
