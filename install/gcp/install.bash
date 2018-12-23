@@ -10,7 +10,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 chmod +x Anaconda3-5.1.0-Linux-x86_64.sh
 bash ./Anaconda3-5.1.0-Linux-x86_64.sh -b
 echo 'export PATH="~/anaconda3/bin:$PATH"' >> ~/.bashrc
-. ~/.bashrc
+source ~/.bashrc
 
 # install docker
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
@@ -32,12 +32,12 @@ echo "if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then" >> ~/.bashrc
 echo "    . /opt/local/etc/profile.d/bash_completion.sh" >> ~/.bashrc
 echo "fi" >> ~/.bashrc
 
-. ~/.bashrc
+source ~/.bashrc
 
 # install python packages
-yes | conda create python=3.6 --name marlo
+yes | conda create python=3.6 jupyter --name marlo
 conda config --add channels conda-forge
-. activate marlo
+source activate marlo
 conda install -y -c crowdai malmo
 conda install -y pytorch torchvision -c pytorch
 conda install -y pyvirtualdisplay
@@ -52,7 +52,7 @@ sudo systemctl restart docker
 # Configure jupyter notebook server
 jupyter notebook --generate-config
 echo "c = get_config()" >> ~/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.ip = '*'" >> ~/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.ip = '0.0.0.0'" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.open_browser = False" >> ~/.jupyter/jupyter_notebook_config.py
 echo "c.NotebookApp.port = 5000" >> ~/.jupyter/jupyter_notebook_config.py
 

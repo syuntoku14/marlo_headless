@@ -5,8 +5,10 @@ Using these scripts, you can easily install and run multiple marlo environment o
 ### Install marlo
 
 ```
-./install/gcp/install.bash
+. ./install/gcp/install.bash
 ```
+
+Make sure to use . command to run in the current shell.
 
 ### Launch Clients
 
