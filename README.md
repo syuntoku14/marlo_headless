@@ -7,19 +7,22 @@ It worked on Google Cloud Ubuntu18.04 with and without GPU, but I guess any clow
 
 ## How to use
 
-### Install marlo
+### 1. Create Ubuntu18.04 instance with opened port 5000
+
+### 2. Install marlo
 
 ```
-. ./install/gcp/install.bash
+git clone https://github.com/syuntoku14/marlo_headless.git
+. ./marlo_headless/install/gcp/install.bash
 ```
 
 Make sure to use . command to run in the current shell.
 
 
-### Launch Clients
+### 3. Launch Clients
 
 ```
-./docker/launch_multi_client.sh [number of environment]
+./marlo_headless/docker/launch_multi_client.sh [number of environment]
 ```
 
 The environments will be connected to ports 10000, 10001, ..., 9999 + [number of ports].
@@ -30,7 +33,7 @@ For example, "sh ./run_docker.sh 3" will run three Minecraft environment connect
 #### Install CUDA
 
 ```
-. ./install/gcp/others/cuda_install.bash
+. ./marlo_headless/install/gcp/others/cuda_install.bash
 ```
 
 #### jupyter-notebook vim extension
