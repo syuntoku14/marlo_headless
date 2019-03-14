@@ -3,7 +3,7 @@ Using these scripts, you can easily install and run multiple marlo environment o
 This script automatically set up jupyter notebook on server(port 5000).
 If you open port 5000, you can access jupyter notebook easily.
 
-It worked on Google Cloud Ubuntu18.04 with and without GPU, but I guess any clowds may work fine.
+It worked on Google Cloud Ubuntu18.04 with and without GPU, but I guess any clouds work fine.
 
 ## What will be installed and setuped
 
